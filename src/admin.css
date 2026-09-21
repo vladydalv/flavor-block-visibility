@@ -1,0 +1,203 @@
+/**
+ * Flavor Block Visibility — Settings page.
+ *
+ * @package flavor-block-visibility
+ */
+
+body.settings_page_flbvis-settings {
+    background: #f7f8fa;
+}
+
+.flbvis-admin {
+    --flbvis-accent: var(--wp-admin-theme-color, #2271b1);
+    --flbvis-accent-soft: color-mix(in srgb, var(--flbvis-accent) 7%, #fff);
+    --flbvis-border: #e7e8ea;
+    --flbvis-text: #1e1e1e;
+    --flbvis-muted: #646970;
+
+    max-width: 800px;
+    color: var(--flbvis-text);
+}
+
+/* Header */
+.flbvis-admin .flbvis-admin__title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0 4px;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.flbvis-admin__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--flbvis-accent-soft);
+    color: var(--flbvis-accent);
+}
+
+.flbvis-admin__version {
+    padding: 2px 8px;
+    border: 1px solid var(--flbvis-border);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--flbvis-muted);
+}
+
+.flbvis-admin__subtitle {
+    margin: 0 0 24px 52px;
+    font-size: 13px;
+    color: var(--flbvis-muted);
+}
+
+/* Cards */
+.flbvis-card {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 0 0 1px var(--flbvis-border), 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.flbvis-card__header {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--flbvis-border);
+}
+
+.flbvis-card__header h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.flbvis-card__header p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: var(--flbvis-muted);
+}
+
+.flbvis-card__body {
+    padding: 24px;
+}
+
+/* Devices */
+.flbvis-devices {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.flbvis-device {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 10px;
+    background: var(--flbvis-accent-soft);
+}
+
+.flbvis-device__head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.flbvis-device__head .dashicons {
+    color: var(--flbvis-accent);
+}
+
+/* Fields */
+.flbvis-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--flbvis-muted);
+}
+
+.flbvis-field__control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.flbvis-admin .flbvis-field input[type="number"] {
+    width: 100px;
+    min-height: 36px;
+    padding: 0 10px;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+}
+
+.flbvis-admin .flbvis-field input[type="number"]:focus {
+    border-color: var(--flbvis-accent);
+    box-shadow: 0 0 0 1px var(--flbvis-accent);
+    outline: none;
+}
+
+.flbvis-field__unit {
+    font-size: 13px;
+    color: var(--flbvis-muted);
+}
+
+.flbvis-field__default {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--flbvis-muted);
+}
+
+/* Checkbox */
+.flbvis-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.flbvis-admin .flbvis-check input[type="checkbox"] {
+    margin: 2px 0 0;
+}
+
+.flbvis-check strong {
+    display: block;
+    font-weight: 600;
+}
+
+.flbvis-check__help {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--flbvis-muted);
+}
+
+.flbvis-admin .submit {
+    margin: 0;
+    padding: 0;
+}
+
+.flbvis-admin .button-primary {
+    min-height: 36px;
+    padding: 0 18px;
+    border-radius: 6px;
+}
+
+@media (max-width: 782px) {
+    .flbvis-devices {
+        grid-template-columns: 1fr;
+    }
+
+    .flbvis-admin__subtitle {
+        margin-left: 0;
+    }
+}
